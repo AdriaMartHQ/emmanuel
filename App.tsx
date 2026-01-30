@@ -44,7 +44,8 @@ const RootLayout = () => {
   );
 };
 
-// 1. 创建路由实例并配置 Future Flags
+// 1. 创建路由实例并配置 Future Flags 
+// 补充了全部 v7 相关的标志以消除控制台警告
 const router = createHashRouter([
   {
     path: '/',
@@ -84,12 +85,14 @@ const router = createHashRouter([
   future: {
     v7_startTransition: true,
     v7_relativeSplatPath: true,
+    v7_fetcherPersist: true,
+    v7_normalizeFormMethod: true,
+    v7_partialHydration: true,
+    v7_skipActionErrorRevalidation: true,
   },
 });
 
 const App: React.FC = () => {
-  // Fix: Removed 'future' prop from RouterProvider as it's not supported by the type definitions
-  // and is already configured in the router instance via createHashRouter.
   return (
     <RouterProvider 
       router={router} 
