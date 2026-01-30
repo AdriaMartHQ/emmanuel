@@ -5,7 +5,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/', // ✅ 新增：自定义域名部署必须加
       server: {
         port: 3000,
         host: '0.0.0.0',

@@ -88,12 +88,11 @@ const router = createHashRouter([
 });
 
 const App: React.FC = () => {
+  // Fix: Removed 'future' prop from RouterProvider as it's not supported by the type definitions
+  // and is already configured in the router instance via createHashRouter.
   return (
     <RouterProvider 
       router={router} 
-      future={{
-        v7_startTransition: true,
-      }}
     />
   );
 };

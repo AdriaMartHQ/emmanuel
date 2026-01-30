@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               执行与接待 / EXECUTION
             </h4>
             <div className="space-y-8">
-              {/* 伊斯坦布尔办公室地址排版优化 */}
+              {/* 伊斯坦布尔办公室地址排版 */}
               <div className="text-[13px] font-light leading-relaxed text-slate-300">
                 <p className="font-bold text-slate-100 mb-1">伊斯坦布尔接待办公室（Bakırköy）</p>
                 <p>Moda Pasajı, Kat 2, Ofis 35</p>
@@ -76,7 +76,6 @@ const Footer: React.FC = () => {
                 </p>
               </div>
               
-              {/* 身份卡片文案优化 */}
               <div className="flex items-center gap-5 p-5 bg-white/[0.02] border border-white/5 rounded-lg group hover:bg-white/[0.05] transition-all duration-500">
                 <div className="w-14 h-14 bg-slate-800/50 flex items-center justify-center rounded border border-white/10 font-black text-[9px] text-slate-500 group-hover:text-amber-500 group-hover:border-amber-500/30 transition-all uppercase tracking-tighter">
                   Consulting
@@ -87,6 +86,32 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* 合作机构 / PARTNERS - 低调设计 */}
+        <div className="py-12 border-b border-white/5">
+          <h4 className="text-[11px] font-bold text-slate-500 mb-10 flex items-center gap-3 uppercase tracking-[0.2em]">
+            <span className="w-1 h-4 bg-slate-800"></span>
+            合作机构 / PARTNERS
+          </h4>
+          <div className="flex flex-wrap gap-x-16 gap-y-4">
+            <a 
+              href="https://grace.tr" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[13px] font-light text-slate-400 hover:text-white transition-colors"
+            >
+              恩途国际旅行社 · Grace Way Travel
+            </a>
+            <a 
+              href="https://balkanchina.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[13px] font-light text-slate-400 hover:text-white transition-colors"
+            >
+              巴尔干中国地接社 · Balkan China DMC
+            </a>
           </div>
         </div>
 
