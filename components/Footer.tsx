@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ENTITY_NAMES } from '../constants/content';
@@ -115,14 +114,24 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* 底部版权 */}
+        {/* 底部版权与法律链接 */}
         <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] text-slate-700 font-mono tracking-[0.2em] uppercase text-center md:text-left">
             © 2025 EMMANUEL İÇ VE DIŞ TİCARET AGENCY. ALL RIGHTS RESERVED.
           </p>
           <div className="flex gap-8">
-            <span className="text-[10px] text-slate-800 uppercase tracking-widest font-bold">Privacy Policy</span>
-            <span className="text-[10px] text-slate-800 uppercase tracking-widest font-bold">Terms of Liaison</span>
+            <Link 
+              to="/privacy" 
+              className="text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest font-bold transition-colors"
+            >
+              Privacy Policy <span className="text-[9px] font-normal opacity-50">(隐私政策)</span>
+            </Link>
+            <Link 
+              to="/terms" 
+              className="text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest font-bold transition-colors"
+            >
+              Terms of Service <span className="text-[9px] font-normal opacity-50">(服务条款)</span>
+            </Link>
           </div>
         </div>
       </div>

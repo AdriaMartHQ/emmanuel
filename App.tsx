@@ -1,7 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { 
-  createHashRouter, 
+  createBrowserRouter, 
   RouterProvider, 
   Outlet, 
   Navigate, 
@@ -17,6 +16,8 @@ import Focus from './pages/Focus';
 import Cases from './pages/Cases';
 import Cooperation from './pages/Cooperation';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 // 页面切换自动回到顶部逻辑
 const ScrollToTop = () => {
@@ -44,9 +45,8 @@ const RootLayout = () => {
   );
 };
 
-// 1. 创建路由实例并配置 Future Flags 
-// 补充了全部 v7 相关的标志以消除控制台警告
-const router = createHashRouter([
+// 使用 createBrowserRouter 替代 createHashRouter 开启 History 路由模式
+const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
@@ -74,6 +74,14 @@ const router = createHashRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'privacy',
+        element: <Privacy />,
+      },
+      {
+        path: 'terms',
+        element: <Terms />,
       },
       {
         path: '*',
