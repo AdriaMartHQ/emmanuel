@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               执行与接待 <span className="text-[9px] opacity-40 uppercase font-normal ml-1">Execution</span>
             </h4>
             <div className="text-[13px] font-light leading-relaxed text-slate-300">
-              <p className="font-bold text-slate-100 mb-0.5">伊斯坦布尔接待协调办公室（示意）</p>
+              <p className="font-bold text-slate-100 mb-0.5">伊斯坦布尔接待协调办公室</p>
               <p className="text-[11px] text-slate-500 font-sans">Bakırköy · İstanbul, Turkey</p>
               <p className="text-[10px] text-slate-600 mt-2 italic">基于合规化执行保障体系运行</p>
             </div>
