@@ -3,26 +3,11 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>跨区域综合交流考察定制平台 - 专业定制方案</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
-    <!--
-🚨 重要同步规则（不可违反）：
-
-1. 本项目使用 Vite + React + GitHub Pages + 自定义域名。
-2. 禁止删除或重写 index.html 中以下结构：
-   - <div id="root"></div>
-   - <script type="module" src="/index.tsx"></script>
-3. vite.config.ts 中必须保留：
-   - base: '/'
-4. .github/workflows/deploy.yml 为部署关键文件，禁止删除或替换。
-5. 本次修改仅允许影响：
-   - 页面内容
-   - UI / 文案 / 组件（components/, pages/）
-6. 如检测到上述关键文件将被破坏，请停止同步并提示用户。
--->
-
+    
     <!-- Leaflet 资源引入 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -38,67 +23,93 @@
         .font-header {
             font-family: 'Noto Serif SC', serif;
         }
-        .mobile-touch-target {
-            min-height: 44px;
-            min-width: 44px;
-        }
         html, body {
             max-width: 100%;
             overflow-x: hidden;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        ::selection {
-            background-color: #b45309;
-            color: white;
-        }
-        
-        /* 地图容器基础样式 */
-        .leaflet-container {
-            font-family: inherit;
-            background-color: #f8fafc; /* 使用非常淡的蓝灰色作为底色 */
+
+        /* --- 移动端专项高密度压缩样式 (Max-width: 480px) --- */
+        @media (max-width: 480px) {
+            /* 1. 全局 Section 纵向间距大幅收紧 */
+            section, .py-16, .py-20, .py-24, .py-28, .py-32 {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            .pb-24 { padding-bottom: 2.5rem !important; }
+            .pt-24 { padding-top: 5rem !important; } /* 仅顶部 Page Header 预留导航空间 */
+
+            /* 2. 首页 Hero 与白盒子的衔接优化 */
+            .-mt-16 { margin-top: -3.5rem !important; }
+            .HeroTextTracking { letter-spacing: 0.02em !important; }
+
+            /* 3. 排版密度：减小 H 标签与段落的间隙 */
+            h1, h2, .text-3xl, .text-4xl {
+                font-size: 1.75rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1rem !important;
+            }
+            .mb-20, .mb-16, .mb-12, .mb-8 { margin-bottom: 1.25rem !important; }
+            .space-y-12 > * + *, .space-y-8 > * + *, .space-y-10 > * + * { margin-top: 1.25rem !important; }
+            .mt-16, .mt-20 { margin-top: 1.5rem !important; }
+            .gap-16, .gap-12, .gap-10 { gap: 1.25rem !important; }
+
+            /* 4. 容器内边距压缩 (Panel / Card / Box) */
+            .p-16, .p-12, .p-10, .p-8 { padding: 1.25rem !important; }
+            .p-6 { padding: 1rem !important; }
+            .rounded-\[2rem\], .rounded-\[2\.5rem\], .rounded-\[3rem\] { border-radius: 1rem !important; }
+
+            /* 5. 地图高度强制控制 (解决视觉空白) */
+            .h-\[320px\], .h-\[380px\], .h-\[500px\] { height: 260px !important; }
+
+            /* 6. 移动端菜单 UI 紧凑化 */
+            .pt-32.px-10 {
+                padding-top: 5.5rem !important;
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+            }
+            .lg\:hidden.fixed.inset-0 .space-y-6 > * + * { margin-top: 0.5rem !important; }
+            .lg\:hidden.fixed.inset-0 .text-2xl {
+                font-size: 1.2rem !important;
+                padding-bottom: 0.5rem !important;
+                border-bottom-width: 1px !important;
+            }
+            .lg\:hidden.fixed.inset-0 .py-5 {
+                padding-top: 0.85rem !important;
+                padding-bottom: 0.85rem !important;
+                margin-top: 1.5rem !important;
+            }
+
+            /* 7. 专家卡片电话字号微调 */
+            .text-2xl.sm\:text-3xl.font-mono { font-size: 1.5rem !important; }
+            
+            /* 8. 列表项目行间距优化 */
+            .list-disc.pl-4 > li + li { margin-top: 0.25rem !important; }
+            
+            /* 9. 页脚优化 */
+            footer { padding-top: 3rem !important; }
+            footer .grid { gap: 2rem !important; padding-bottom: 2rem !important; }
+            footer .pb-12, footer .pb-8 { padding-bottom: 1rem !important; }
         }
 
-        /* 仅对瓦片层应用轻微视觉增强，不影响 Marker 与 Popup */
-        .leaflet-tile-pane {
-            filter: contrast(1.08) brightness(1.02);
-            transition: filter 0.3s ease;
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        /* Custom scrollbar for official feel */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #101D33;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #b45309;
-        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.28.1?deps=react@19.0.0,react-dom@19.0.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/"
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
   }
 }
 </script>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-slate-50">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
