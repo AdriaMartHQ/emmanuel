@@ -18,11 +18,13 @@ const Hero: React.FC = () => {
         {/* 中心 Logo */}
         <Logo isHero className="mb-4" />
         
-        <h2 className="text-white text-3xl sm:text-5xl font-black tracking-[0.05em] sm:tracking-[0.15em] mb-4 uppercase leading-tight">
+        {/* 移动端 tracking 优化：0.15em -> 0.05em 防止断行 */}
+        <h2 className="text-white text-3xl sm:text-5xl font-black tracking-[0.05em] sm:tracking-[0.15em] mb-4 uppercase leading-tight sm:leading-tight">
           EMMANUEL GLOBAL LIAISON
         </h2>
         
-        <div className="text-amber-500 text-lg sm:text-xl font-bold tracking-[0.3em] sm:tracking-[0.8em] mb-10 sm:mb-12 border-y border-amber-600/20 py-4 w-full">
+        {/* 移动端副标题间距：0.8em -> 0.3em 提升阅读紧凑感 */}
+        <div className="text-amber-500 text-lg sm:text-xl font-bold tracking-[0.25em] sm:tracking-[0.8em] mb-10 sm:mb-12 border-y border-amber-600/20 py-4 w-full">
           以马内利 · 国际执行
         </div>
 

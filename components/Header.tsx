@@ -35,11 +35,15 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      style={{ paddingTop: isHomePage && !scrolled ? 'calc(1.5rem + env(safe-area-inset-top))' : 'env(safe-area-inset-top)' }}
+      style={{ 
+        paddingTop: isHomePage && !scrolled 
+          ? 'calc(1.5rem + env(safe-area-inset-top))' 
+          : 'env(safe-area-inset-top)' 
+      }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out ${headerBackgroundClass} px-1 sm:px-0`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-11 sm:h-auto">
+        <div className="flex justify-between items-center h-12 sm:h-auto">
           <Link to="/" onClick={closeMenu} className="active:opacity-70 transition-opacity">
             <Logo />
           </Link>
@@ -70,7 +74,7 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Toggle - Enhanced for Touch */}
+          {/* Mobile Toggle - 优化点击反馈与面积 */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden w-11 h-11 flex items-center justify-center text-white active:scale-90 active:bg-white/10 rounded-full transition-all focus:outline-none"
@@ -93,7 +97,7 @@ const Header: React.FC = () => {
               {item.name}
             </NavLink>
           ))}
-          <Link to="/contact" onClick={closeMenu} className="block w-full py-4 bg-amber-600 text-center text-white font-bold uppercase tracking-widest mt-10 active:bg-amber-700">
+          <Link to="/contact" onClick={closeMenu} className="block w-full py-5 bg-amber-600 text-center text-white font-bold uppercase tracking-widest mt-10 active:bg-amber-700 active:scale-[0.98] transition-all">
             即刻咨询
           </Link>
         </div>
