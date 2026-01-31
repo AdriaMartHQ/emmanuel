@@ -30,19 +30,16 @@
 
         /* --- 移动端专项高密度压缩样式 (Max-width: 480px) --- */
         @media (max-width: 480px) {
-            /* 1. 全局 Section 纵向间距大幅收紧 */
             section, .py-16, .py-20, .py-24, .py-28, .py-32 {
                 padding-top: 2.5rem !important;
                 padding-bottom: 2.5rem !important;
             }
             .pb-24 { padding-bottom: 2.5rem !important; }
-            .pt-24 { padding-top: 5rem !important; } /* 仅顶部 Page Header 预留导航空间 */
+            .pt-24 { padding-top: 5rem !important; }
 
-            /* 2. 首页 Hero 与白盒子的衔接优化 */
             .-mt-16 { margin-top: -3.5rem !important; }
             .HeroTextTracking { letter-spacing: 0.02em !important; }
 
-            /* 3. 排版密度：减小 H 标签与段落的间隙 */
             h1, h2, .text-3xl, .text-4xl {
                 font-size: 1.75rem !important;
                 line-height: 1.2 !important;
@@ -53,15 +50,13 @@
             .mt-16, .mt-20 { margin-top: 1.5rem !important; }
             .gap-16, .gap-12, .gap-10 { gap: 1.25rem !important; }
 
-            /* 4. 容器内边距压缩 (Panel / Card / Box) */
             .p-16, .p-12, .p-10, .p-8 { padding: 1.25rem !important; }
             .p-6 { padding: 1rem !important; }
             .rounded-\[2rem\], .rounded-\[2\.5rem\], .rounded-\[3rem\] { border-radius: 1rem !important; }
 
-            /* 5. 地图高度强制控制 (解决视觉空白) */
-            .h-\[320px\], .h-\[380px\], .h-\[500px\] { height: 260px !important; }
+            /* 修正地图高度，符合 300-340px 目标，保持专业紧凑感 */
+            .h-\[320px\], .h-\[380px\], .h-\[500px\], .sm\:h-\[520px\] { height: 320px !important; }
 
-            /* 6. 移动端菜单 UI 紧凑化 */
             .pt-32.px-10 {
                 padding-top: 5.5rem !important;
                 padding-left: 1.5rem !important;
@@ -79,13 +74,9 @@
                 margin-top: 1.5rem !important;
             }
 
-            /* 7. 专家卡片电话字号微调 */
             .text-2xl.sm\:text-3xl.font-mono { font-size: 1.5rem !important; }
-            
-            /* 8. 列表项目行间距优化 */
             .list-disc.pl-4 > li + li { margin-top: 0.25rem !important; }
             
-            /* 9. 页脚优化 */
             footer { padding-top: 3rem !important; }
             footer .grid { gap: 2rem !important; padding-bottom: 2rem !important; }
             footer .pb-12, footer .pb-8 { padding-bottom: 1rem !important; }
@@ -97,6 +88,16 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+        /* Leaflet Popup 样式微调 */
+        .business-popup .leaflet-popup-content-wrapper {
+            border-radius: 6px;
+            padding: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .business-popup .leaflet-popup-content {
+            margin: 8px 12px;
+        }
     </style>
 <script type="importmap">
 {
