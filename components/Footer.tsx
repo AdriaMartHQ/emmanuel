@@ -11,6 +11,11 @@ const Footer: React.FC = () => {
     { name: '联系我们', href: '/contact' },
   ];
 
+  const friendLinks = [
+    { name: '恩途国际旅行社', en: 'Grace Travel', url: 'https://grace.tr' },
+    { name: '巴尔干中国 DMC', en: 'BalkanChina DMC', url: 'https://balkanchina.com' },
+  ];
+
   return (
     <footer className="bg-[#0a1120] text-slate-400 pt-12 sm:pt-16 pb-8 sm:pb-10 border-t border-white/5 font-sans">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -65,6 +70,23 @@ const Footer: React.FC = () => {
               <p className="text-[10px] text-slate-600 mt-2 italic">基于合规化执行保障体系运行</p>
             </div>
           </div>
+        </div>
+
+        {/* 友情链接 - 放置于版权信息上方的次级区域 */}
+        <div className="py-6 border-b border-white/5 flex flex-wrap justify-center sm:justify-start items-center gap-x-8 gap-y-3">
+          <span className="text-[11px] text-slate-600 font-bold uppercase tracking-widest">友情链接 / Links:</span>
+          {friendLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="text-[12px] text-slate-500 hover:text-amber-500 transition-colors flex items-center gap-1.5"
+            >
+              <span>{link.name}</span>
+              <span className="text-[10px] opacity-40 font-mono hidden sm:inline">{link.en}</span>
+            </a>
+          ))}
         </div>
 
         {/* Bottom Legal - 紧凑化处理 */}
