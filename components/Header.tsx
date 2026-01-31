@@ -8,23 +8,19 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // 判断当前是否在首页
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      // 在首页时，滚动超过 10px 切换背景；非首页则始终保持深色
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 核心逻辑：计算背景类名
-  // 如果【不在首页】或者【在首页且已滚动】，则显示深色毛玻璃背景
   const headerBackgroundClass = (!isHomePage || scrolled)
-    ? 'bg-[#0a1120]/95 backdrop-blur-md shadow-2xl py-3 border-b border-white/5'
-    : 'bg-transparent py-6 sm:py-8 border-b border-transparent';
+    ? 'bg-[#0a1120]/95 backdrop-blur-md shadow-2xl py-2 sm:py-3 border-b border-white/5'
+    : 'bg-transparent py-4 sm:py-8 border-b border-transparent';
 
   const navItems = [
     { name: '首页', href: '/' },
@@ -39,11 +35,12 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out ${headerBackgroundClass}`}
+      style={{ paddingTop: isHomePage && !scrolled ? 'calc(1.5rem + env(safe-area-inset-top))' : 'env(safe-area-inset-top)' }}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out ${headerBackgroundClass} px-1 sm:px-0`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <Link to="/" onClick={closeMenu}>
+        <div className="flex justify-between items-center h-11 sm:h-auto">
+          <Link to="/" onClick={closeMenu} className="active:opacity-70 transition-opacity">
             <Logo />
           </Link>
 
@@ -63,7 +60,6 @@ const Header: React.FC = () => {
                 </NavLink>
               ))}
             </nav>
-            
             <div className="flex items-center border-l border-white/10 pl-10">
               <Link 
                 to="/contact" 
@@ -74,16 +70,16 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Toggle - Enhanced for Touch */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-white mobile-touch-target focus:outline-none"
+            className="lg:hidden w-11 h-11 flex items-center justify-center text-white active:scale-90 active:bg-white/10 rounded-full transition-all focus:outline-none"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-4 flex flex-col justify-between items-end">
-              <span className={`h-[1px] bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 rotate-45 translate-y-[7.5px]' : 'w-6'}`}></span>
-              <span className={`h-[1px] bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-4'}`}></span>
-              <span className={`h-[1px] bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 -rotate-45 -translate-y-[7.5px]' : 'w-6'}`}></span>
+              <span className={`h-[1.5px] bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 rotate-45 translate-y-[7.5px]' : 'w-6'}`}></span>
+              <span className={`h-[1.5px] bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-4'}`}></span>
+              <span className={`h-[1.5px] bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 -rotate-45 -translate-y-[7.5px]' : 'w-6'}`}></span>
             </div>
           </button>
         </div>
@@ -93,11 +89,11 @@ const Header: React.FC = () => {
       <div className={`lg:hidden fixed inset-0 bg-[#0a1120] z-[90] transition-all duration-500 pt-32 px-10 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
         <div className="space-y-6">
           {navItems.map((item) => (
-            <NavLink key={item.name} to={item.href} onClick={closeMenu} className="block text-2xl font-bold text-white border-b border-white/5 pb-4">
+            <NavLink key={item.name} to={item.href} onClick={closeMenu} className="block text-2xl font-bold text-white border-b border-white/5 pb-4 active:text-amber-500">
               {item.name}
             </NavLink>
           ))}
-          <Link to="/contact" onClick={closeMenu} className="block w-full py-4 bg-amber-600 text-center text-white font-bold uppercase tracking-widest mt-10">
+          <Link to="/contact" onClick={closeMenu} className="block w-full py-4 bg-amber-600 text-center text-white font-bold uppercase tracking-widest mt-10 active:bg-amber-700">
             即刻咨询
           </Link>
         </div>
