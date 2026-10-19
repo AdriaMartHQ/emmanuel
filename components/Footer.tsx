@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BALKAN_PARTNER } from '../constants/content';
 
 const Footer: React.FC = () => {
   const navLinks = [
@@ -65,9 +66,13 @@ const Footer: React.FC = () => {
               执行与接待 <span className="text-[9px] opacity-40 uppercase font-normal ml-1">Execution</span>
             </h4>
             <div className="text-[13px] font-light leading-relaxed text-slate-300">
-              <p className="font-bold text-slate-100 mb-0.5">伊斯坦布尔接待协调办公室</p>
-              <p className="text-[11px] text-slate-500 font-sans">Bakırköy · İstanbul, Turkey</p>
-              <p className="text-[10px] text-slate-600 mt-2 italic">基于合规化执行保障体系运行</p>
+              <p className="font-bold text-slate-100 mb-0.5">BalkanChina · 巴尔干项目承接</p>
+              <p className="text-[11px] text-slate-500 font-sans">Belgrade · 巴尔干地区</p>
+              <div className="text-sm text-slate-400 mt-3 leading-relaxed">
+                <p>签约 · 收款 · 开票 · 落地接待</p>
+                <p className="mt-2">实际公司名称及责任以项目合同为准。</p>
+                <a href={BALKAN_PARTNER.contact} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-amber-500 underline underline-offset-4">联系 BalkanChina ↗</a>
+              </div>
             </div>
           </div>
         </div>
@@ -95,7 +100,7 @@ const Footer: React.FC = () => {
           className="pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-[9px] text-slate-700 font-mono tracking-wider uppercase text-center md:text-left">
-            © 2025 EMMANUEL İÇ VE DIŞ TİCARET AGENCY. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} EMMANUEL GLOBAL CONSULTING. ALL RIGHTS RESERVED.
           </p>
           <div className="flex gap-6">
             <Link 

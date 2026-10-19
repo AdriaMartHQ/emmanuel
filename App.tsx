@@ -15,9 +15,11 @@ import Approach from './pages/Approach';
 import Focus from './pages/Focus';
 import Cases from './pages/Cases';
 import Cooperation from './pages/Cooperation';
-import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+
+// Load the local map renderer and geographic data only on the contact page.
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 // 页面切换自动回到顶部逻辑
 const ScrollToTop = () => {
@@ -73,7 +75,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'contact',
-        element: <Contact />,
+        element: (
+          <React.Suspense fallback={<p className="pt-32 pb-16 px-6 text-slate-500" role="status">正在加载联系信息…</p>}>
+            <Contact />
+          </React.Suspense>
+        ),
       },
       {
         path: 'privacy',

@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Emmanuel Global Consulting
 
-# Run and deploy your AI Studio app
+React / Vite site for https://emmanuel.tr, deployed by the existing Cloudflare
+Pages project `emmanuel` from the `main` branch of `AdriaMartHQ/emmanuel`.
 
-This contains everything you need to run your app locally.
+## Local development and checks
 
-View your app in AI Studio: https://ai.studio/apps/drive/1awWv3wNBvopO56AoDBROeZj6ZojAEbrJ
+```sh
+npm ci
+npm run dev
+npx tsc --noEmit
+npm run build
+npm run preview
+```
 
-## Run Locally
+The build output is `dist/`. `public/_redirects` preserves client-side routes.
+This site does not need an AI API key or a map API key.
 
-**Prerequisites:**  Node.js
+## Service responsibilities
 
+Emmanuel provides preliminary consulting, topic design and institutional
+coordination. For Balkan-region projects, the registered company operating
+BalkanChina contracts, receives payment, issues the relevant invoices and
+organizes local reception. The actual legal name, bank account, billing entity,
+service scope and responsibilities are specified in each project agreement.
+Arrangements for other regions are confirmed separately.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Brand links and the published WeChat ID live in `constants/content.tsx`.
+
+## Contact map
+
+The contact page uses Leaflet 1.9.4 and locally bundled Natural Earth physical
+land outlines (`data/service-land.json`). It does not fetch third-party map
+tiles. This is a city-level service network illustration, not street navigation.
+The contact page and map are loaded separately so other pages do not download
+the map data. Source and licensing notices are in `public/maps/`.

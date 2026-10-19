@@ -2,11 +2,20 @@
 import { CaseItem, FocusArea, RegionNode } from '../types';
 
 export const ENTITY_NAMES = {
-  EXECUTION: "Emmanuel İç ve Dış Ticaret Ltd. Şti.",
-  EXECUTION_ZH: "以马内利国际商务与交流执行服务机构",
+  CONSULTING: "Emmanuel Global Consulting",
+  CONSULTING_ROLE: "前期咨询与机构协调",
   AGENCY: "Grace Way Travel Agency",
   DOMAIN: "Emmanuel.tr"
 };
+
+export const BALKAN_PARTNER = {
+  name: 'BalkanChina 巴尔干中国',
+  website: 'https://balkanchina.com/',
+  contact: 'https://balkanchina.com/contactus',
+};
+
+// Preserve the contact ID currently published on emmanuel.tr.
+export const WECHAT_ID = 'AdriaMart';
 
 export const FOCUS_AREAS: FocusArea[] = [
   { 

@@ -1,0 +1,25 @@
+.leaflet-container {
+  background: #f8fafc;
+}
+
+.leaflet-tooltip.hub-label {
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 5%);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.leaflet-control-attribution {
+  font-size: 11px;
+  margin-right: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+#contact button:focus-visible,
+#contact a:focus-visible {
+  outline: 2px solid #b45309;
+  outline-offset: 4px;
+}

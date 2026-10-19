@@ -1,0 +1,10 @@
+Map rendering: Leaflet 1.9.4, BSD-2-Clause. See LEAFLET-LICENSE.txt.
+https://leafletjs.com/
+
+Physical land outlines: Natural Earth, 1:110m ne_110m_land.
+Public domain. https://www.naturalearthdata.com/about/terms-of-use/
+Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson
+Only physical coastlines are displayed; this schematic is not for navigation.
+
+Map geometry, rendering library, styles and marker assets are served by this
+website. The updated map does not request CARTO or other remote tile APIs.

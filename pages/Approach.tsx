@@ -28,7 +28,7 @@ const Approach: React.FC = () => {
         {/* 原有的补充说明 */}
         <section className="bg-slate-50 p-10 border border-slate-100">
           <p className="text-slate-500 text-sm leading-relaxed font-light">
-            平台以研究支撑与信息协调为核心职能，不介入非公开事务。所有执行环节均在公开、透明的框架下运行，并由具备资质的合作方负责接待与结算，确保业务边界的清晰与执行流程的确定。
+            Emmanuel 以研究支撑与机构协调为核心职能。巴尔干地区项目由 BalkanChina 对应的注册运营公司负责签约、收款、开票与落地接待；其他地区的承接主体和服务范围在项目合同中另行明确。
           </p>
         </section>
 
