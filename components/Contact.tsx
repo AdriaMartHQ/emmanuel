@@ -5,7 +5,7 @@ import type { GeoJsonObject } from 'geojson';
 import 'leaflet/dist/leaflet.css';
 import '../styles/map.css';
 import serviceLand from '../data/service-land.json';
-import { BALKAN_PARTNER, WECHAT_ID } from '../constants/content';
+import { WECHAT_ID } from '../constants/content';
 
 const RECEPTION_HUBS = [
   { name: 'Istanbul (伊斯坦布尔)', sub: '总部 / 执行中心', lat: 41.0082, lng: 28.9784 },
@@ -171,13 +171,7 @@ const Contact: React.FC = () => {
               <div className="absolute top-0 left-12 right-12 h-1 bg-amber-500 rounded-b-full"></div>
               <div className="text-center mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">与专家即刻对话</h3>
-                <div className="mt-4 text-sm text-slate-500 leading-relaxed">
-                  <p>Emmanuel：前期咨询与机构协调</p>
-                  <p className="mt-2">BalkanChina：巴尔干项目签约、收款与接待</p>
-                  <a href={BALKAN_PARTNER.contact} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 px-4 py-3 bg-amber-50 text-amber-800 border border-amber-200 rounded-lg font-medium underline underline-offset-4">
-                    联系 BalkanChina · 项目报价与接待 ↗
-                  </a>
-                </div>
+                <p className="text-slate-400 text-[11px] font-light uppercase tracking-widest">Immediate Response Policy</p>
               </div>
               <div className="space-y-3.5 mb-10">
                 <button onClick={handleWeChatClick} className={`w-full py-5 px-6 border rounded-xl flex flex-col items-center justify-center gap-1 font-bold transition-all active:scale-[0.98] ${isCopied ? 'bg-amber-50 border-amber-200 text-amber-600' : 'bg-white border-slate-100 text-slate-700 active:bg-slate-50'}`}>
@@ -195,7 +189,7 @@ const Contact: React.FC = () => {
                     <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   </div>
                   <div className="text-left">
-                    <p className="text-[9px] text-slate-400 uppercase font-bold">Emmanuel · 前期咨询</p>
+                    <p className="text-[9px] text-slate-400 uppercase font-bold">客户预订</p>
                     <p className="text-sm font-bold text-slate-800">consult@emmanuel.tr</p>
                   </div>
                 </a>

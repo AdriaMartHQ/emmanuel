@@ -14,8 +14,8 @@ export const BALKAN_PARTNER = {
   contact: 'https://balkanchina.com/contactus',
 };
 
-// Preserve the contact ID currently published on emmanuel.tr.
-export const WECHAT_ID = 'AdriaMart';
+// Shared by the displayed contact ID and the click-to-copy action.
+export const WECHAT_ID = 'BalkanChina';
 
 export const FOCUS_AREAS: FocusArea[] = [
   { 
