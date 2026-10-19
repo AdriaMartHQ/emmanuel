@@ -50,7 +50,7 @@ const Cooperation: React.FC = () => {
 
             <div className="mt-10 p-4 bg-slate-50 border-l-4 border-slate-300">
               <p className="text-xs text-slate-600 leading-relaxed">
-                <strong>职能分工说明：</strong> Emmanuel 专注于前期咨询与机构协调，不代收巴尔干项目服务款项。BalkanChina 为巴尔干项目的签约与接待品牌，合同须列明实际注册公司全称、收款账户、开票主体及责任范围；其他地区的承接安排另行确认。
+                <strong>职能分工说明：</strong> Emmanuel 专注于前期咨询与机构协调，BalkanChina 负责巴尔干地区项目的签约、结算及落地接待。
               </p>
             </div>
           </div>
