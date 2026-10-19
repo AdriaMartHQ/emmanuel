@@ -34,9 +34,9 @@ const Terms: React.FC = () => {
               2. Engagement Protocol / 合作协议
             </h2>
             <p className="text-slate-600 leading-relaxed font-light">
-              Formal engagements require a separate signed agreement. For Balkan-region projects, the agreement identifies the registered company operating BalkanChina as the contracting and billing entity, including its payment details, service scope, fees, and cancellation terms. Website information does not replace that agreement.
+              All formal engagements require a separate signed agreement. The information provided on this website is for informational purposes and does not constitute a binding contract until a formal project proposal is accepted.
               <br/><br/>
-              正式合作须签署独立协议。巴尔干地区项目由 BalkanChina 对应的注册运营公司签约、收款并开具相应票据；合同须列明公司全称、收款账户、开票主体、服务范围、费用及变更与取消条件。本网站的信息不替代项目合同。
+              所有正式合作均需签署独立协议。本网站提供的信息仅供参考，在正式项目方案被接受前，不构成具有法律约束力的合同。
             </p>
           </section>
 
@@ -46,9 +46,9 @@ const Terms: React.FC = () => {
               3. Execution Boundaries / 执行边界
             </h2>
             <p className="text-slate-600 leading-relaxed font-light">
-              Emmanuel provides preliminary consulting, topic design, and institutional coordination. For Balkan-region projects, the registered company operating BalkanChina organizes local reception and supplier services and bears the delivery and refund responsibilities specified in the contract. Emmanuel does not collect payments for those services. Arrangements for other regions are confirmed separately.
+              As detailed in our Methodology, physical logistics and financial settlements are handled by our certified local partners to ensure full compliance and auditability in each jurisdiction.
               <br/><br/>
-              Emmanuel 提供前期咨询、议题设计与机构协调，不代收巴尔干项目服务款项。BalkanChina 对应的注册运营公司组织当地接待与供应商服务，并按合同承担服务交付及退款责任。其他地区的承接主体与责任范围另行确认。
+              正如我们的“工作方式”中所述，具体的落地保障和财务结算由我们具备资质的当地合作伙伴负责，以确保在各法区内的完全合规与可审计性。
             </p>
           </section>
 

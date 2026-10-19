@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
           className="pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-[9px] text-slate-700 font-mono tracking-wider uppercase text-center md:text-left">
-            © {new Date().getFullYear()} EMMANUEL GLOBAL CONSULTING. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} EMMANUEL İÇ VE DIŞ TİCARET AGENCY. ALL RIGHTS RESERVED.
           </p>
           <div className="flex gap-6">
             <Link 

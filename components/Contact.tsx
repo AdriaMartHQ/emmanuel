@@ -9,7 +9,7 @@ import { WECHAT_ID } from '../constants/content';
 
 const RECEPTION_HUBS = [
   { name: 'Istanbul (伊斯坦布尔)', sub: '总部 / 执行中心', lat: 41.0082, lng: 28.9784 },
-  { name: 'Belgrade (贝尔格莱德)', sub: 'BalkanChina · 巴尔干项目接待', lat: 44.7866, lng: 20.4489 },
+  { name: 'Belgrade (贝尔格莱德)', sub: '接待资源分部', lat: 44.7866, lng: 20.4489 },
   { name: 'Dubai (迪拜)', sub: '接待资源分部', lat: 25.2048, lng: 55.2708 },
   { name: 'Nairobi (内罗毕)', sub: '接待资源分部', lat: -1.2921, lng: 36.8219 },
   { name: 'Yerevan (埃里温)', sub: '接待资源分部', lat: 40.1772, lng: 44.5133 },
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
             规划您的深度交流与调研
           </h2>
           <p className="text-slate-400 text-base sm:text-lg font-light leading-relaxed">
-            与 Emmanuel 沟通调研主题、拟访机构与方案需求；巴尔干项目的报价、签约、付款及落地接待请联系 BalkanChina。
+            我们的执行专家常驻欧亚及非洲核心枢纽，随时为您规划任务导向的公务行程。
           </p>
         </div>
 
@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
           <div className="mb-6 px-6 sm:px-0">
              <h3 className="text-sm font-bold text-slate-900 tracking-widest uppercase flex items-center gap-3">
                <span className="w-8 h-px bg-amber-500"></span>
-               交流与接待资源示意 / Service Network
+               接待资源分部示意 / Global Reception & Execution Hubs
              </h3>
           </div>
           <div className="rounded-none sm:rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl relative h-[320px] sm:h-[520px] z-10 group">
@@ -217,18 +217,10 @@ const Contact: React.FC = () => {
                 <button type="button" onClick={activateMap} className="lg:hidden absolute inset-0 z-[1001] bg-[#0a1120]/30 backdrop-blur-[1px] flex flex-col items-center justify-center cursor-pointer">
                   <div className="bg-white/95 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl">
                      <svg className="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                     <span className="text-xs font-bold text-slate-900 tracking-wider">点击查看城市与缩放地图</span>
+                     <span className="text-xs font-bold text-slate-900 tracking-wider">点击激活资源地图交互</span>
                   </div>
                 </button>
              )}
-          </div>
-          <div className="px-6 sm:px-0 mt-6 space-y-3">
-            <p className="text-sm text-slate-500 leading-relaxed">
-              地图仅展示城市级资源位置。巴尔干项目由 BalkanChina 承接；其他地区的具体服务安排以项目确认为准。
-            </p>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
-              {RECEPTION_HUBS.map(hub => <li key={hub.name}>{hub.name}</li>)}
-            </ul>
           </div>
         </div>
       </div>

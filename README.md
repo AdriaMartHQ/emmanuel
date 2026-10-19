@@ -16,16 +16,11 @@ npm run preview
 The build output is `dist/`. `public/_redirects` preserves client-side routes.
 This site does not need an AI API key or a map API key.
 
-## Service responsibilities
+## Website content
 
-Emmanuel provides preliminary consulting, topic design and institutional
-coordination. For Balkan-region projects, the registered company operating
-BalkanChina contracts, receives payment, issues the relevant invoices and
-organizes local reception. The actual legal name, bank account, billing entity,
-service scope and responsibilities are specified in each project agreement.
-Arrangements for other regions are confirmed separately.
-
-Brand links and the published WeChat ID live in `constants/content.tsx`.
+Business descriptions, responsibilities and service terms retain their original
+wording. The WeChat contact ID is `BalkanChina`, shared between its display and
+the copy action through `constants/content.tsx`.
 
 ## Contact map
 

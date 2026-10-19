@@ -11,7 +11,7 @@ const CooperationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">合作与执行模式</h1>
           <p className="text-slate-500 max-w-2xl font-light leading-relaxed">
-            Emmanuel 提供前期咨询与机构协调，BalkanChina 承接巴尔干项目的签约、收款、开票与落地接待。
+            基于合规、专业与高效的原则，我们建立了清晰的业务隔离与协同机制。
           </p>
         </div>
       </div>

@@ -2,16 +2,10 @@
 import { CaseItem, FocusArea, RegionNode } from '../types';
 
 export const ENTITY_NAMES = {
-  CONSULTING: "Emmanuel Global Consulting",
-  CONSULTING_ROLE: "前期咨询与机构协调",
+  EXECUTION: "Emmanuel İç ve Dış Ticaret Ltd. Şti.",
+  EXECUTION_ZH: "以马内利国际商务与交流执行服务机构",
   AGENCY: "Grace Way Travel Agency",
   DOMAIN: "Emmanuel.tr"
-};
-
-export const BALKAN_PARTNER = {
-  name: 'BalkanChina 巴尔干中国',
-  website: 'https://balkanchina.com/',
-  contact: 'https://balkanchina.com/contactus',
 };
 
 // Shared by the displayed contact ID and the click-to-copy action.
